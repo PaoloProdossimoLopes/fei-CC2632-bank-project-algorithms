@@ -35,13 +35,74 @@ void apresenta_mensagem_de_sair() {
 }
 
 /**
- * Metodo disponíbilizado para informar ao usuario que a opcao escolida do menu é invalida.
- * @returns void
+ * Metodo disponíbilizado para informar ao usuario que a opcão escolida do menu é invalida.
  */
 void apresentar_mensagem_de_opcao_invalida() {
     printf("Opcao invalida. Tente novamente.\n");
 }
 
+#define MAXIMO_CARACTERES_PARA_NOME 100
+#define MAXIMO_CARACTERES_PARA_CPF 12
+#define MAXIMO_CARACTERES_PARA_TIPO_CONTA 10
+#define MAXIMO_CARACTERES_PARA_SENHA 20
+
+/**
+ * Estrutura responsavel por representar o cliente do banco\n\n
+ *
+ * @param nome Lista de caracteres que representa o nome do usuario (limitado em até 100 caracteres).
+ * @param cpf Lista de caracteres que representa o cpf do usuario (limitado em até 12 caracteres).
+ * @param tipo_conta Lista de caracteres que representa o tipo da conta do usuario (limitado em até 10 caracteres).
+ * @param saldo Numero que representa o saldo em conta do usuario.
+ * @param senha Lista de caracteres que representa a senha do usuario (limitado em até 20 caracteres).
+ */
+typedef struct {
+    char nome[MAXIMO_CARACTERES_PARA_NOME];
+    char cpf[MAXIMO_CARACTERES_PARA_CPF];
+    char tipo_conta[MAXIMO_CARACTERES_PARA_TIPO_CONTA];
+    float saldo;
+    char senha[MAXIMO_CARACTERES_PARA_SENHA];
+} Cliente;
+
+/**
+ * Metodo disponibilziado para cadastrar o cliente no banco.\n\n
+ *
+ * Esse metodo salva as informações do cliente em um arquivo binario.\n\n
+ *
+ * Caso ocorrar um problema na abertura do arquivo a aplicação sera finalziada com o codigo `1`.
+ */
+void cadatrar_cliente_no_banco() {
+    Cliente cliente;
+    FILE *arquivo;
+
+    // Captura inforções do cliente
+    printf("Digite o nome do cliente: ");
+    scanf(" %[^\n]s", cliente.nome);
+    printf("Digite o CPF do cliente: ");
+    scanf(" %s", cliente.cpf);
+    printf("Digite o tipo de conta (comum ou plus): ");
+    scanf(" %s", cliente.tipo_conta);
+    printf("Digite o valor inicial da conta: ");
+    scanf("%f", &cliente.saldo);
+    printf("Digite a senha do cliente: ");
+    scanf(" %s", cliente.senha);
+
+    // Abre o arquivo binário em modo de escrita (append)
+    arquivo = fopen("clientes.dat", "ab");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        exit(1);
+    }
+
+    // Escreve os dados do cliente no arquivo
+    fwrite(&cliente, sizeof(Cliente), 1, arquivo);
+
+    // Fecha o arquivo
+    fclose(arquivo);
+
+    printf("Cliente cadastrado com sucesso!\n");
+}
 
 int main() {
     int escolha;
@@ -52,6 +113,7 @@ int main() {
 
         switch (escolha) {
             case OPCAO_NOVO_CLIENTE:
+                cadatrar_cliente_no_banco();
                 break;
             case OPCAO_APAGAR_CLIENTE:
                 break;
