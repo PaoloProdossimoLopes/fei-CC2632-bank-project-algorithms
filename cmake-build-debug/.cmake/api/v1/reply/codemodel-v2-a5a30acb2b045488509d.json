@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.26"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fei_CC2632_bank_project_algorithms",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fei_CC2632_bank_project_algorithms::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fei_CC2632_bank_project_algorithms-Debug-333cf4a219c75797c75d.json",
+					"name" : "fei_CC2632_bank_project_algorithms",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/prols/CC2632/fei-CC2632-bank-project-algorithms/cmake-build-debug",
+		"source" : "/Users/prols/CC2632/fei-CC2632-bank-project-algorithms"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
