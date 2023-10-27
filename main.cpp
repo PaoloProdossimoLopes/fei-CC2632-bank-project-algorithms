@@ -31,7 +31,7 @@ void imprime_menu() {
 /**
  * Metodo disponíbilizado para informar ao usuario que o programa foi finalizado.
  */
-void apresenta_mensagem_de_sair() {
+void apresentar_mensagem_de_sair() {
     printf("Saindo do programa.\n");
 }
 
@@ -113,12 +113,12 @@ void cadatrar_cliente_no_banco() {
  * Caso ocorrar um problema na abertura do arquivo temporario a aplicação sera finalziada com o codigo `1`.
  */
 void apagar_cliente_do_banco() {
-    char cpfBusca[12];
-    FILE *arquivoTemp, *arquivo;
+    char cpf_busca[MAXIMO_CARACTERES_PARA_CPF];
+    FILE *arquivo_temp, *arquivo;
     Cliente cliente;
 
     printf("Digite o CPF do cliente que deseja apagar: ");
-    scanf(" %s", cpfBusca);
+    scanf(" %s", cpf_busca);
 
     // Abre o arquivo original em modo leitura
     arquivo = fopen("clientes.dat", "rb");
@@ -130,10 +130,10 @@ void apagar_cliente_do_banco() {
     }
 
     // Abre um arquivo temporário em modo de escrita
-    arquivoTemp = fopen("temp.dat", "wb");
+    arquivo_temp = fopen("temp.dat", "wb");
 
     // Verifica se o arquivo temporário foi aberto com sucesso
-    if (arquivoTemp == NULL) {
+    if (arquivo_temp == NULL) {
         printf("Erro ao abrir o arquivo temporario.\n");
         fclose(arquivo);
         exit(1);
@@ -143,16 +143,16 @@ void apagar_cliente_do_banco() {
 
     // Lê os registros do arquivo original e grava no arquivo temporário, exceto o registro com CPF igual ao informado
     while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
-        if (strcmp(cliente.cpf, cpfBusca) == 0) {
+        if (strcmp(cliente.cpf, cpf_busca) == 0) {
             encontrado = 1;
         } else {
-            fwrite(&cliente, sizeof(Cliente), 1, arquivoTemp);
+            fwrite(&cliente, sizeof(Cliente), 1, arquivo_temp);
         }
     }
 
     // Fecha os arquivos
     fclose(arquivo);
-    fclose(arquivoTemp);
+    fclose(arquivo_temp);
 
     // Remove o arquivo original
     remove("clientes.dat");
@@ -165,6 +165,36 @@ void apagar_cliente_do_banco() {
     } else {
         printf("Cliente nao encontrado.\n");
     }
+}
+
+/**
+ * Metodo usado para listar o nome dos clientes já cadastrados no banco.\n\n
+ *
+ * Caso ocorrar um problema na abertura do arquivo a aplicação sera finalziada com o codigo `1`.
+ */
+void listar_nome_dos_clientes_cadastrados_no_banco() {
+    FILE *arquivo;
+    Cliente cliente;
+
+    // Abre o arquivo em modo leitura
+    arquivo = fopen("clientes.dat", "rb");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Nenhum cliente cadastrado.\n");
+        return;
+    }
+
+    printf("\nNomes dos Clientes Cadastrados:\n");
+    printf("---------------------------------\n");
+
+    // Lê e imprime os nomes dos clientes
+    while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
+        printf("%s\n", cliente.nome);
+    }
+
+    // Fecha o arquivo
+    fclose(arquivo);
 }
 
 int main() {
@@ -182,6 +212,7 @@ int main() {
                 apagar_cliente_do_banco();
                 break;
             case OPCAO_LISTAR_CLIENTE:
+                listar_nome_dos_clientes_cadastrados_no_banco();
                 break;
             case OPCAO_DEBITO:
                 break;
@@ -192,7 +223,7 @@ int main() {
             case OPCAO_TRANSFERENCIA:
                 break;
             case OPCAO_SAIR:
-                apresenta_mensagem_de_sair();
+                apresentar_mensagem_de_sair();
                 exit(0);
             default:
                 apresentar_mensagem_de_opcao_invalida();
