@@ -11,7 +11,10 @@
 #define OPCAO_TRANSFERENCIA 7
 #define OPCAO_SAIR 0
 
-void inprime_menu() {
+/**
+ * Função disponíbilizada para imprimir as operações que o banco pode fazer.
+ */
+void imprime_menu() {
     printf("\nMenu de Opcoes:\n");
     printf("%d. Novo Cliente\n", OPCAO_NOVO_CLIENTE);
     printf("%d. Apaga Cliente\n", OPCAO_APAGAR_CLIENTE);
@@ -24,19 +27,27 @@ void inprime_menu() {
     printf("Escolha: ");
 }
 
+/**
+ * Metodo disponíbilizado para informar ao usuario que o programa foi finalizado.
+ */
 void apresenta_mensagem_de_sair() {
     printf("Saindo do programa.\n");
 }
 
+/**
+ * Metodo disponíbilizado para informar ao usuario que a opcao escolida do menu é invalida.
+ * @returns void
+ */
 void apresentar_mensagem_de_opcao_invalida() {
     printf("Opcao invalida. Tente novamente.\n");
 }
+
 
 int main() {
     int escolha;
 
     while (TRUE) {
-        inprime_menu();
+        imprime_menu();
         scanf("%d", &escolha);
 
         switch (escolha) {
