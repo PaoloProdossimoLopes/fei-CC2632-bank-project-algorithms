@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <cstring>
 
 #define TRUE 1
 #define OPCAO_NOVO_CLIENTE 1
@@ -104,6 +105,68 @@ void cadatrar_cliente_no_banco() {
     printf("Cliente cadastrado com sucesso!\n");
 }
 
+/**
+ * O Metodo de apagar cliente remove as inforçoes do usuario do banco apartir do CPF\n\n
+ *
+ * Caso ocorrar um problema na abertura do arquivo a aplicação sera finalziada com o codigo `1`.\n\n
+ *
+ * Caso ocorrar um problema na abertura do arquivo temporario a aplicação sera finalziada com o codigo `1`.
+ */
+void apagar_cliente_do_banco() {
+    char cpfBusca[12];
+    FILE *arquivoTemp, *arquivo;
+    Cliente cliente;
+
+    printf("Digite o CPF do cliente que deseja apagar: ");
+    scanf(" %s", cpfBusca);
+
+    // Abre o arquivo original em modo leitura
+    arquivo = fopen("clientes.dat", "rb");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        exit(1);
+    }
+
+    // Abre um arquivo temporário em modo de escrita
+    arquivoTemp = fopen("temp.dat", "wb");
+
+    // Verifica se o arquivo temporário foi aberto com sucesso
+    if (arquivoTemp == NULL) {
+        printf("Erro ao abrir o arquivo temporario.\n");
+        fclose(arquivo);
+        exit(1);
+    }
+
+    int encontrado = 0;
+
+    // Lê os registros do arquivo original e grava no arquivo temporário, exceto o registro com CPF igual ao informado
+    while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
+        if (strcmp(cliente.cpf, cpfBusca) == 0) {
+            encontrado = 1;
+        } else {
+            fwrite(&cliente, sizeof(Cliente), 1, arquivoTemp);
+        }
+    }
+
+    // Fecha os arquivos
+    fclose(arquivo);
+    fclose(arquivoTemp);
+
+    // Remove o arquivo original
+    remove("clientes.dat");
+
+    // Renomeia o arquivo temporário para o arquivo original
+    rename("temp.dat", "clientes.dat");
+
+    if (encontrado) {
+        printf("Cliente apagado com sucesso!\n");
+    } else {
+        printf("Cliente nao encontrado.\n");
+    }
+}
+
 int main() {
     int escolha;
 
@@ -116,6 +179,7 @@ int main() {
                 cadatrar_cliente_no_banco();
                 break;
             case OPCAO_APAGAR_CLIENTE:
+                apagar_cliente_do_banco();
                 break;
             case OPCAO_LISTAR_CLIENTE:
                 break;
