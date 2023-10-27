@@ -21,6 +21,15 @@ void inprime_menu() {
     printf("%d. Extrato\n", OPCAO_EXTRATO);
     printf("%d. Transferencia Entre Contas\n", OPCAO_TRANSFERENCIA);
     printf("%d. Sair\n", OPCAO_SAIR);
+    printf("Escolha: ");
+}
+
+void apresenta_mensagem_de_sair() {
+    printf("Saindo do programa.\n");
+}
+
+void apresentar_mensagem_de_opcao_invalida() {
+    printf("Opcao invalida. Tente novamente.\n");
 }
 
 int main() {
@@ -28,7 +37,6 @@ int main() {
 
     while (TRUE) {
         inprime_menu();
-        printf("Escolha: ");
         scanf("%d", &escolha);
 
         switch (escolha) {
@@ -47,10 +55,10 @@ int main() {
             case OPCAO_TRANSFERENCIA:
                 break;
             case OPCAO_SAIR:
-                printf("Saindo do programa.\n");
+                apresenta_mensagem_de_sair();
                 exit(0);
             default:
-                printf("Opcao invalida. Tente novamente.\n");
+                apresentar_mensagem_de_opcao_invalida();
         }
     }
 }
