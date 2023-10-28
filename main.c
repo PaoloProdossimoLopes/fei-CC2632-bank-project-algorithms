@@ -292,8 +292,100 @@ void realizarDebito(char cpf[], char senha[], float valor, int *resultado) {
         printf("CPF incorreto.\n");
         fclose(arquivo);
         *resultado = 0; // Indica falha
-// Implemente a função de depósito aqui
+
+
     }
+void visualizarExtrato(char cpf[]) {
+    FILE *arquivo;
+    char nomeArquivo[50];
+    char linha[1000];  // Assumindo que cada linha do extrato terá no máximo 1000 caracteres
+
+    // Construa o nome do arquivo de extrato baseado no CPF do cliente
+    sprintf(nomeArquivo, "%s_extrato.txt", cpf);
+
+    // Abra o arquivo de extrato em modo leitura
+    arquivo = fopen(nomeArquivo, "r");
+
+    // Verifique se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo de extrato.\n");
+        return;
+    }
+
+    // Leia e imprima o conteúdo do extrato linha por linha
+    while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+        printf("%s", linha);
+    }
+
+    // Feche o arquivo de extrato
+    fclose(arquivo);
+}
+void gerarExtrato(char cpf[], char senha[], int *resultado) {
+    FILE *arquivoEntrada, *arquivoSaida;
+    Cliente cliente;
+    char nomeArquivo[50];
+
+    // Abra o arquivo de clientes em modo leitura
+    arquivoEntrada = fopen("clientes.dat", "rb");
+
+    // Verifique se o arquivo foi aberto com sucesso
+    if (arquivoEntrada == NULL) {
+        printf("Erro ao abrir o arquivo de clientes.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Encontre o cliente com o CPF fornecido
+    int encontrouCliente = 0;
+    while (fread(&cliente, sizeof(Cliente), 1, arquivoEntrada) == 1) {
+        if (strcmp(cliente.cpf, cpf) == 0 && strcmp(cliente.senha, senha) == 0) {
+            encontrouCliente = 1;
+            break;
+        }
+    }
+
+    // Feche o arquivo de clientes
+    fclose(arquivoEntrada);
+
+    // Se o cliente não foi encontrado, indique erro e retorne
+    if (!encontrouCliente) {
+        printf("CPF ou senha incorretos.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Construa o nome do arquivo de saída baseado no CPF do cliente
+    sprintf(nomeArquivo, "%s_extrato.txt", cpf);
+
+    // Abra o arquivo de saída em modo escrita
+    arquivoSaida = fopen(nomeArquivo, "w");
+
+    // Verifique se o arquivo de saída foi aberto com sucesso
+    if (arquivoSaida == NULL) {
+        printf("Erro ao criar o arquivo de extrato.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Escreva o cabeçalho no arquivo de saída
+    fprintf(arquivoSaida, "Extrato de Operações\n");
+    fprintf(arquivoSaida, "---------------------\n");
+
+    // Escreva as operações no arquivo de saída
+    fprintf(arquivoSaida, "Data: %s", __DATE__); // Obtém a data atual
+    fprintf(arquivoSaida, " | Operação: Depósito");
+    fprintf(arquivoSaida, " | Valor: %.2f", cliente.saldo);
+    fprintf(arquivoSaida, " | Saldo Atual: %.2f\n", cliente.saldo);
+
+    // Feche o arquivo de saída
+    fclose(arquivoSaida);
+
+    // Visualize o extrato gerado
+    visualizarExtrato(cpf);
+
+    *resultado = 1; // Indica sucesso
+}
+
 int main() {
     int escolha;
     char senha[20];
@@ -346,6 +438,19 @@ int main() {
                 }
                 break;
             case OPCAO_EXTRATO:
+                printf("Digite o CPF: ");
+                scanf("%s", cpf);
+                printf("Digite a senha: ");
+                scanf("%s", senha);
+
+                // Chame a função para gerar o extrato
+                gerarExtrato(cpf, senha, &resultado);
+
+                if (resultado) {
+                    printf("Extrato gerado com sucesso. Consulte o arquivo %s_extrato.txt.\n", cpf);
+                } else {
+                    printf("CPF ou senha incorretos. Não foi possível gerar o extrato.\n");
+                }
                 break;
             case OPCAO_TRANSFERENCIA:
                 break;

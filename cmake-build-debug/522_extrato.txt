@@ -1,0 +1,3 @@
+Extrato de Operações
+---------------------
+Data: Oct 28 2023 | Operação: Depósito | Valor: 475.00 | Saldo Atual: 475.00
