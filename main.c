@@ -197,9 +197,73 @@ void listar_nome_dos_clientes_cadastrados_no_banco() {
     // Fecha o arquivo
     fclose(arquivo);
 }
+void realizarDebito(char cpf[], char senha[], float valor, int *resultado) {
+    FILE *arquivo;
+    Cliente cliente;
+
+    // Abre o arquivo em modo leitura e escrita
+    arquivo = fopen("clientes.dat", "r+b");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Procura o cliente com o CPF e senha fornecidos
+    while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
+        if (strcmp(cliente.cpf, cpf) == 0 && strcmp(cliente.senha, senha) == 0) {
+            // Verifica se há saldo suficiente para o débito
+            if (cliente.saldo >= valor) {
+                // Aplica a taxa de acordo com o tipo de conta
+                if (strcmp(cliente.tipo_conta, "comum") == 0) {
+                    valor *= 1.05; // Cobra taxa de 5% para conta comum
+                } else if (strcmp(cliente.tipo_conta, "plus") == 0) {
+                    valor *= 1.03; // Cobra taxa de 3% para conta plus
+                }
+
+                cliente.saldo -= valor;
+
+                // Verifica limite de saldo negativo
+                float limite_negativo = (strcmp(cliente.tipo_conta, "comum") == 0) ? -1000.0 : -5000.0;
+                if (cliente.saldo < limite_negativo) {
+                    printf("Saldo negativo excedeu o limite permitido.\n");
+                    fclose(arquivo);
+                    *resultado = -1; // Indica saldo negativo excedido
+                    return;
+                }
+
+                // Move o cursor para a posição correta no arquivo
+                fseek(arquivo, -sizeof(Cliente), SEEK_CUR);
+                // Escreve as informações atualizadas do cliente no arquivo
+                fwrite(&cliente, sizeof(Cliente), 1, arquivo);
+                // Fecha o arquivo
+                fclose(arquivo);
+                *resultado = 1; // Indica sucesso
+                return;
+            } else {
+                printf("Saldo insuficiente.\n");
+                fclose(arquivo);
+                *resultado = -2; // Indica saldo insuficiente
+                return;
+            }
+        }
+    }
+
+    // Cliente não encontrado
+    printf("CPF ou senha incorretos.\n");
+    fclose(arquivo);
+    *resultado = 0; // Indica falha
+}
+    // Implemente a função de débito aqui
 
 int main() {
     int escolha;
+    char senha[20];
+    char cpf[12];
+    float valor;
+    int resultado;
 
     while (TRUE) {
         imprime_menu();
@@ -216,6 +280,20 @@ int main() {
                 listar_nome_dos_clientes_cadastrados_no_banco();
                 break;
             case OPCAO_DEBITO:
+                printf("Digite o CPF: ");
+                scanf("%s", cpf);
+                printf("Digite a senha: ");
+                scanf("%s", senha);
+                printf("Digite o valor a ser debitado: ");
+                scanf("%f", &valor);
+
+                realizarDebito(cpf, senha, valor, &resultado);
+
+                if (resultado) {
+                    printf("Débito realizado com sucesso!\n");
+                } else {
+                    printf("Erro ao realizar débito. Verifique as informações fornecidas.\n");
+                }
                 break;
             case OPCAO_DEPOSITO:
                 break;
