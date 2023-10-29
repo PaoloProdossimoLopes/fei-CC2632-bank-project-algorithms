@@ -197,9 +197,255 @@ void listar_nome_dos_clientes_cadastrados_no_banco() {
     // Fecha o arquivo
     fclose(arquivo);
 }
+void realizarDebito(char cpf[], char senha[], float valor, int *resultado) {
+    FILE *arquivo;
+    Cliente cliente;
 
+    // Abre o arquivo em modo leitura e escrita
+    arquivo = fopen("clientes.dat", "r+b");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Procura o cliente com o CPF e senha fornecidos
+    while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
+        if (strcmp(cliente.cpf, cpf) == 0 && strcmp(cliente.senha, senha) == 0) {
+            // Verifica se há saldo suficiente para o débito
+            if (cliente.saldo >= valor) {
+                // Aplica a taxa de acordo com o tipo de conta
+                if (strcmp(cliente.tipo_conta, "comum") == 0) {
+                    valor *= 1.05; // Cobra taxa de 5% para conta comum
+                } else if (strcmp(cliente.tipo_conta, "plus") == 0) {
+                    valor *= 1.03; // Cobra taxa de 3% para conta plus
+                }
+
+                cliente.saldo -= valor;
+
+                // Verifica limite de saldo negativo
+                float limite_negativo = (strcmp(cliente.tipo_conta, "comum") == 0) ? -1000.0 : -5000.0;
+                if (cliente.saldo < limite_negativo) {
+                    printf("Saldo negativo excedeu o limite permitido.\n");
+                    fclose(arquivo);
+                    *resultado = -1; // Indica saldo negativo excedido
+                    return;
+                }
+
+                // Move o cursor para a posição correta no arquivo
+                fseek(arquivo, -sizeof(Cliente), SEEK_CUR);
+                // Escreve as informações atualizadas do cliente no arquivo
+                fwrite(&cliente, sizeof(Cliente), 1, arquivo);
+                // Fecha o arquivo
+                fclose(arquivo);
+                *resultado = 1; // Indica sucesso
+                return;
+            } else {
+                printf("Saldo insuficiente.\n");
+                fclose(arquivo);
+                *resultado = -2; // Indica saldo insuficiente
+                return;
+            }
+        }
+    }
+
+    // Cliente não encontrado
+    printf("CPF ou senha incorretos.\n");
+    fclose(arquivo);
+    *resultado = 0; // Indica falha
+}
+    // Implemente a função de débito aqui
+    void realizarDeposito(char cpf[], float valor, int *resultado) {
+        FILE *arquivo;
+        Cliente cliente;
+
+        // Abre o arquivo em modo leitura e escrita
+        arquivo = fopen("clientes.dat", "r+b");
+
+        // Verifica se o arquivo foi aberto com sucesso
+        if (arquivo == NULL) {
+            printf("Erro ao abrir o arquivo.\n");
+            *resultado = 0; // Indica falha
+            return;
+        }
+
+        // Procura o cliente com o CPF fornecido
+        while (fread(&cliente, sizeof(Cliente), 1, arquivo) == 1) {
+            if (strcmp(cliente.cpf, cpf) == 0) {
+                // Atualiza o saldo do cliente com o valor depositado
+                cliente.saldo += valor;
+
+                // Move o cursor para a posição correta no arquivo
+                fseek(arquivo, -sizeof(Cliente), SEEK_CUR);
+                // Escreve as informações atualizadas do cliente no arquivo
+                fwrite(&cliente, sizeof(Cliente), 1, arquivo);
+                // Fecha o arquivo
+                fclose(arquivo);
+                *resultado = 1; // Indica sucesso
+                return;
+            }
+        }
+
+        // Cliente não encontrado
+        printf("CPF incorreto.\n");
+        fclose(arquivo);
+        *resultado = 0; // Indica falha
+
+
+    }
+void visualizarExtrato(char cpf[]) {
+    FILE *arquivo;
+    char nomeArquivo[50];
+    char linha[1000];  // Assumindo que cada linha do extrato terá no máximo 1000 caracteres
+
+    // Construa o nome do arquivo de extrato baseado no CPF do cliente
+    sprintf(nomeArquivo, "%s_extrato.txt", cpf);
+
+    // Abra o arquivo de extrato em modo leitura
+    arquivo = fopen(nomeArquivo, "r");
+
+    // Verifique se o arquivo foi aberto com sucesso
+    if (arquivo == NULL) {
+        printf("Erro ao abrir o arquivo de extrato.\n");
+        return;
+    }
+
+    // Leia e imprima o conteúdo do extrato linha por linha
+    while (fgets(linha, sizeof(linha), arquivo) != NULL) {
+        printf("%s", linha);
+    }
+
+    // Feche o arquivo de extrato
+    fclose(arquivo);
+}
+void gerarExtrato(char cpf[], char senha[], int *resultado) {
+    FILE *arquivoEntrada, *arquivoSaida;
+    Cliente cliente;
+    char nomeArquivo[50];
+
+    // Abra o arquivo de clientes em modo leitura
+    arquivoEntrada = fopen("clientes.dat", "rb");
+
+    // Verifique se o arquivo foi aberto com sucesso
+    if (arquivoEntrada == NULL) {
+        printf("Erro ao abrir o arquivo de clientes.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Encontre o cliente com o CPF fornecido
+    int encontrouCliente = 0;
+    while (fread(&cliente, sizeof(Cliente), 1, arquivoEntrada) == 1) {
+        if (strcmp(cliente.cpf, cpf) == 0 && strcmp(cliente.senha, senha) == 0) {
+            encontrouCliente = 1;
+            break;
+        }
+    }
+
+    // Feche o arquivo de clientes
+    fclose(arquivoEntrada);
+
+    // Se o cliente não foi encontrado, indique erro e retorne
+    if (!encontrouCliente) {
+        printf("CPF ou senha incorretos.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Construa o nome do arquivo de saída baseado no CPF do cliente
+    sprintf(nomeArquivo, "%s_extrato.txt", cpf);
+
+    // Abra o arquivo de saída em modo escrita
+    arquivoSaida = fopen(nomeArquivo, "w");
+
+    // Verifique se o arquivo de saída foi aberto com sucesso
+    if (arquivoSaida == NULL) {
+        printf("Erro ao criar o arquivo de extrato.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Escreva o cabeçalho no arquivo de saída
+    fprintf(arquivoSaida, "Extrato de Operações\n");
+    fprintf(arquivoSaida, "---------------------\n");
+
+    // Escreva as operações no arquivo de saída
+    fprintf(arquivoSaida, "Data: %s", __DATE__); // Obtém a data atual
+    fprintf(arquivoSaida, " | Operação: Depósito");
+    fprintf(arquivoSaida, " | Valor: %.2f", cliente.saldo);
+    fprintf(arquivoSaida, " | Saldo Atual: %.2f\n", cliente.saldo);
+
+    // Feche o arquivo de saída
+    fclose(arquivoSaida);
+
+    // Visualize o extrato gerado
+    visualizarExtrato(cpf);
+
+    *resultado = 1; // Indica sucesso
+}
+void realizarTransferencia(char cpf_origem[], char senha_origem[], char cpf_destino[], float valor, int *resultado) {
+    FILE *arquivoClientes;
+    Cliente clienteOrigem, clienteDestino;
+
+    // Abre o arquivo de clientes em modo leitura e escrita binária
+    arquivoClientes = fopen("clientes.dat", "r+b");
+
+    // Verifica se o arquivo foi aberto com sucesso
+    if (arquivoClientes == NULL) {
+        printf("Erro ao abrir o arquivo de clientes.\n");
+        *resultado = 0; // Indica falha
+        return;
+    }
+
+    // Procura o cliente de origem pelo CPF e senha
+    while (fread(&clienteOrigem, sizeof(Cliente), 1, arquivoClientes) == 1) {
+        if (strcmp(clienteOrigem.cpf, cpf_origem) == 0 && strcmp(clienteOrigem.senha, senha_origem) == 0) {
+            // Verifica se o cliente de origem tem saldo suficiente para a transferência
+            if (clienteOrigem.saldo >= valor) {
+                // Procura o cliente de destino pelo CPF
+                while (fread(&clienteDestino, sizeof(Cliente), 1, arquivoClientes) == 1) {
+                    if (strcmp(clienteDestino.cpf, cpf_destino) == 0) {
+                        // Realiza a transferência
+                        clienteOrigem.saldo -= valor;
+                        clienteDestino.saldo += valor;
+
+                        // Atualiza os dados dos clientes no arquivo
+                        fseek(arquivoClientes, -sizeof(Cliente), SEEK_CUR);
+                        fwrite(&clienteOrigem, sizeof(Cliente), 1, arquivoClientes);
+
+                        fseek(arquivoClientes, -sizeof(Cliente), SEEK_CUR);
+                        fwrite(&clienteDestino, sizeof(Cliente), 1, arquivoClientes);
+
+                        *resultado = 1; // Indica sucesso
+                        fclose(arquivoClientes);
+                        return;
+                    }
+                }
+                printf("CPF de destino não encontrado.\n");
+                *resultado = 0; // Indica falha
+                fclose(arquivoClientes);
+                return;
+            } else {
+                printf("Saldo insuficiente para realizar a transferência.\n");
+                *resultado = 0; // Indica falha
+                fclose(arquivoClientes);
+                return;
+            }
+        }
+    }
+
+    printf("CPF ou senha de origem incorretos.\n");
+    *resultado = 0; // Indica falha
+    fclose(arquivoClientes);
+}
 int main() {
     int escolha;
+    char senha[20];
+    char cpf[12];
+    float valor;
+    int resultado;
 
     while (TRUE) {
         imprime_menu();
@@ -216,13 +462,73 @@ int main() {
                 listar_nome_dos_clientes_cadastrados_no_banco();
                 break;
             case OPCAO_DEBITO:
+                printf("Digite o CPF: ");
+                scanf("%s", cpf);
+                printf("Digite a senha: ");
+                scanf("%s", senha);
+                printf("Digite o valor a ser debitado: ");
+                scanf("%f", &valor);
+
+                realizarDebito(cpf, senha, valor, &resultado);
+
+                if (resultado) {
+                    printf("Débito realizado com sucesso!\n");
+                } else {
+                    printf("Erro ao realizar débito. Verifique as informações fornecidas.\n");
+                }
                 break;
             case OPCAO_DEPOSITO:
+                printf("Digite o CPF: ");
+                scanf("%s", cpf);
+                printf("Digite o valor a ser depositado: ");
+                scanf("%f", &valor);
+
+                realizarDeposito(cpf, valor, &resultado);
+
+                if (resultado) {
+                    printf("Depósito realizado com sucesso!\n");
+                } else {
+                    printf("Erro ao realizar depósito. Verifique as informações fornecidas.\n");
+                }
                 break;
             case OPCAO_EXTRATO:
+                printf("Digite o CPF: ");
+                scanf("%s", cpf);
+                printf("Digite a senha: ");
+                scanf("%s", senha);
+
+                // Chame a função para gerar o extrato
+                gerarExtrato(cpf, senha, &resultado);
+
+                if (resultado) {
+                    printf("Extrato gerado com sucesso. Consulte o arquivo %s_extrato.txt.\n", cpf);
+                } else {
+                    printf("CPF ou senha incorretos. Não foi possível gerar o extrato.\n");
+                }
                 break;
-            case OPCAO_TRANSFERENCIA:
+            case OPCAO_TRANSFERENCIA: {
+                char cpf_origem[12];
+                char senha_origem[20];
+                char cpf_destino[12];
+                printf("Digite o CPF de origem: ");
+                scanf("%s", cpf_origem);
+                printf("Digite a senha de origem: ");
+                scanf("%s", senha_origem);
+                printf("Digite o CPF de destino: ");
+                scanf("%s", cpf_destino);
+                printf("Digite o valor a ser transferido: ");
+                scanf("%f", &valor);
+
+                // Chame a função para realizar a transferência
+                realizarTransferencia(cpf_origem, senha_origem, cpf_destino, valor, &resultado);
+
+                if (resultado) {
+                    printf("Transferência realizada com sucesso.\n");
+                } else {
+                    printf("Erro ao realizar transferência. Verifique as informações fornecidas.\n");
+                }
                 break;
+            }
             case OPCAO_SAIR:
                 apresentar_mensagem_de_sair();
                 exit(0);

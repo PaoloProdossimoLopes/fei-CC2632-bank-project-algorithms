@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "fei_CC2632_bank_project_algorithms"
+			"path" : "fei_CC2632_bank_project_algorithms.exe"
+		},
+		{
+			"path" : "fei_CC2632_bank_project_algorithms.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +38,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -mmacosx-version-min=13.5 -fcolor-diagnostics"
+					"fragment" : "-g -fdiagnostics-color=always"
 				}
 			],
 			"language" : "C",
@@ -57,12 +60,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "fei_CC2632_bank_project_algorithms",
-	"nameOnDisk" : "fei_CC2632_bank_project_algorithms",
+	"nameOnDisk" : "fei_CC2632_bank_project_algorithms.exe",
 	"paths" : 
 	{
 		"build" : ".",
