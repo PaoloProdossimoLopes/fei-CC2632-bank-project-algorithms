@@ -92,6 +92,25 @@ CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-ba
   B:/www/github/c/fei-CC2632-bank-project-algorithms/depositar-valor-na-conta-do-banco.h \
   B:/www/github/c/fei-CC2632-bank-project-algorithms/cliente.h
 
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.c \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/strings.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/cliente.h
+
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.c \
   C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
@@ -129,19 +148,39 @@ CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj: B:/www/github/c/fe
   C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/errno.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/strings.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
-  B:/www/github/c/fei-CC2632-bank-project-algorithms/cliente.h \
   B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.h \
   B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.h \
   B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.h \
-  B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.h
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/depositar-valor-na-conta-do-banco.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.h
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.c \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_mac.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/strings.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/string.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/crtdefs.h \
+  C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.h \
+  B:/www/github/c/fei-CC2632-bank-project-algorithms/cliente.h
 
 
 B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.c:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
+
+B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.h:
 
 B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.c:
 
@@ -199,6 +238,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.2/bin/mingw/x86_64-w64-mingw32/include/s
 
 B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.h:
 
+B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.c:
+
 B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.h:
 
 B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.c:
@@ -209,4 +250,8 @@ B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.c:
 
 B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.h:
 
+B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.h:
+
 B:/www/github/c/fei-CC2632-bank-project-algorithms/main.c:
+
+B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.c:
