@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms
+CMAKE_SOURCE_DIR = B:\www\github\c\fei-CC2632-bank-project-algorithms
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug
+CMAKE_BINARY_DIR = B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depend.make
@@ -69,32 +69,144 @@ include CMakeFiles/fei_CC2632_bank_project_algorithms.dir/progress.make
 include CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
 
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
-CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj: C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/main.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/main.c
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.obj -c C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\main.c
 
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\main.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.i
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\main.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.i
 
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\main.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.s
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\main.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\main.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\cadastrar-cliente.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\cadastrar-cliente.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\cadastrar-cliente.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\cadastrar-cliente.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\cadastrar-cliente.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\cadastrar-cliente.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\cadastrar-cliente.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\apagar-cliente.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\apagar-cliente.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\apagar-cliente.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\apagar-cliente.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\apagar-cliente.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\apagar-cliente.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\apagar-cliente.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\listar-clientes.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\listar-clientes.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\listar-clientes.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\listar-clientes.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\listar-clientes.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\listar-clientes.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\listar-clientes.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\debitar-valor-da-conta.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\debitar-valor-da-conta.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\debitar-valor-da-conta.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\debitar-valor-da-conta.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\debitar-valor-da-conta.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\debitar-valor-da-conta.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\debitar-valor-da-conta.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/depositar-valor-na-conta-do-banco.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\depositar-valor-na-conta-do-banco.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\depositar-valor-na-conta-do-banco.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\depositar-valor-na-conta-do-banco.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\depositar-valor-na-conta-do-banco.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\depositar-valor-na-conta-do-banco.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\depositar-valor-na-conta-do-banco.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\depositar-valor-na-conta-do-banco.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\gerar-extrato.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\gerar-extrato.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\gerar-extrato.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\gerar-extrato.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\gerar-extrato.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\gerar-extrato.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\gerar-extrato.c.s
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/flags.make
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj: B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.c
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj -MF CMakeFiles\fei_CC2632_bank_project_algorithms.dir\transferir_entre_contas_do_banco.c.obj.d -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\transferir_entre_contas_do_banco.c.obj -c B:\www\github\c\fei-CC2632-bank-project-algorithms\transferir_entre_contas_do_banco.c
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E B:\www\github\c\fei-CC2632-bank-project-algorithms\transferir_entre_contas_do_banco.c > CMakeFiles\fei_CC2632_bank_project_algorithms.dir\transferir_entre_contas_do_banco.c.i
+
+CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S B:\www\github\c\fei-CC2632-bank-project-algorithms\transferir_entre_contas_do_banco.c -o CMakeFiles\fei_CC2632_bank_project_algorithms.dir\transferir_entre_contas_do_banco.c.s
 
 # Object files for target fei_CC2632_bank_project_algorithms
 fei_CC2632_bank_project_algorithms_OBJECTS = \
-"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj"
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj" \
+"CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj"
 
 # External object files for target fei_CC2632_bank_project_algorithms
 fei_CC2632_bank_project_algorithms_EXTERNAL_OBJECTS =
 
 fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj
+fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj
 fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/build.make
 fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/linkLibs.rsp
 fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/objects1.rsp
 fei_CC2632_bank_project_algorithms.exe: CMakeFiles/fei_CC2632_bank_project_algorithms.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable fei_CC2632_bank_project_algorithms.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable fei_CC2632_bank_project_algorithms.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\fei_CC2632_bank_project_algorithms.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -106,6 +218,6 @@ CMakeFiles/fei_CC2632_bank_project_algorithms.dir/clean:
 .PHONY : CMakeFiles/fei_CC2632_bank_project_algorithms.dir/clean
 
 CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles\fei_CC2632_bank_project_algorithms.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" B:\www\github\c\fei-CC2632-bank-project-algorithms B:\www\github\c\fei-CC2632-bank-project-algorithms B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles\fei_CC2632_bank_project_algorithms.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depend
 

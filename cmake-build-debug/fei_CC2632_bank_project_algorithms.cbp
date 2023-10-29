@@ -8,84 +8,129 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
+				<Option working_dir="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fei_CC2632_bank_project_algorithms">
-				<Option output="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/fei_CC2632_bank_project_algorithms.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
+				<Option output="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/fei_CC2632_bank_project_algorithms.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 fei_CC2632_bank_project_algorithms"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 fei_CC2632_bank_project_algorithms"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="fei_CC2632_bank_project_algorithms/fast">
-				<Option output="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/fei_CC2632_bank_project_algorithms.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
+				<Option output="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/fei_CC2632_bank_project_algorithms.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 fei_CC2632_bank_project_algorithms/fast"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 fei_CC2632_bank_project_algorithms/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
+				<Option working_dir="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
+				<Option working_dir="B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.2/bin/mingw/bin/mingw32-make.exe -f &quot;B:/www/github/c/fei-CC2632-bank-project-algorithms/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/main.c">
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.c">
 			<Option target="fei_CC2632_bank_project_algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Felipe/Downloads/c/fei-CC2632-bank-project-algorithms/CMakeLists.txt">
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/apagar-cliente.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/cadastrar-cliente.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/cliente.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/debitar-valor-da-conta.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/depositar-valor-na-conta-do-banco.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/depositar-valor-na-conta-do-banco.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/gerar-extrato.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/listar-clientes.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/main.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.c">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/transferir_entre_contas_do_banco.h">
+			<Option target="fei_CC2632_bank_project_algorithms"/>
+		</Unit>
+		<Unit filename="B:/www/github/c/fei-CC2632-bank-project-algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
