@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms
+CMAKE_SOURCE_DIR = B:\www\github\c\fei-CC2632-bank-project-algorithms
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug
+CMAKE_BINARY_DIR = B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithm
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Felipe\Downloads\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start B:\www\github\c\fei-CC2632-bank-project-algorithms\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,150 @@ fei_CC2632_bank_project_algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/build
 .PHONY : fei_CC2632_bank_project_algorithms/fast
 
+apagar-cliente.obj: apagar-cliente.c.obj
+.PHONY : apagar-cliente.obj
+
+# target to build an object file
+apagar-cliente.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.obj
+.PHONY : apagar-cliente.c.obj
+
+apagar-cliente.i: apagar-cliente.c.i
+.PHONY : apagar-cliente.i
+
+# target to preprocess a source file
+apagar-cliente.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.i
+.PHONY : apagar-cliente.c.i
+
+apagar-cliente.s: apagar-cliente.c.s
+.PHONY : apagar-cliente.s
+
+# target to generate assembly for a file
+apagar-cliente.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/apagar-cliente.c.s
+.PHONY : apagar-cliente.c.s
+
+cadastrar-cliente.obj: cadastrar-cliente.c.obj
+.PHONY : cadastrar-cliente.obj
+
+# target to build an object file
+cadastrar-cliente.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.obj
+.PHONY : cadastrar-cliente.c.obj
+
+cadastrar-cliente.i: cadastrar-cliente.c.i
+.PHONY : cadastrar-cliente.i
+
+# target to preprocess a source file
+cadastrar-cliente.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.i
+.PHONY : cadastrar-cliente.c.i
+
+cadastrar-cliente.s: cadastrar-cliente.c.s
+.PHONY : cadastrar-cliente.s
+
+# target to generate assembly for a file
+cadastrar-cliente.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/cadastrar-cliente.c.s
+.PHONY : cadastrar-cliente.c.s
+
+debitar-valor-da-conta.obj: debitar-valor-da-conta.c.obj
+.PHONY : debitar-valor-da-conta.obj
+
+# target to build an object file
+debitar-valor-da-conta.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.obj
+.PHONY : debitar-valor-da-conta.c.obj
+
+debitar-valor-da-conta.i: debitar-valor-da-conta.c.i
+.PHONY : debitar-valor-da-conta.i
+
+# target to preprocess a source file
+debitar-valor-da-conta.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.i
+.PHONY : debitar-valor-da-conta.c.i
+
+debitar-valor-da-conta.s: debitar-valor-da-conta.c.s
+.PHONY : debitar-valor-da-conta.s
+
+# target to generate assembly for a file
+debitar-valor-da-conta.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/debitar-valor-da-conta.c.s
+.PHONY : debitar-valor-da-conta.c.s
+
+depositar-valor-na-conta-do-banco.obj: depositar-valor-na-conta-do-banco.c.obj
+.PHONY : depositar-valor-na-conta-do-banco.obj
+
+# target to build an object file
+depositar-valor-na-conta-do-banco.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.obj
+.PHONY : depositar-valor-na-conta-do-banco.c.obj
+
+depositar-valor-na-conta-do-banco.i: depositar-valor-na-conta-do-banco.c.i
+.PHONY : depositar-valor-na-conta-do-banco.i
+
+# target to preprocess a source file
+depositar-valor-na-conta-do-banco.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.i
+.PHONY : depositar-valor-na-conta-do-banco.c.i
+
+depositar-valor-na-conta-do-banco.s: depositar-valor-na-conta-do-banco.c.s
+.PHONY : depositar-valor-na-conta-do-banco.s
+
+# target to generate assembly for a file
+depositar-valor-na-conta-do-banco.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/depositar-valor-na-conta-do-banco.c.s
+.PHONY : depositar-valor-na-conta-do-banco.c.s
+
+gerar-extrato.obj: gerar-extrato.c.obj
+.PHONY : gerar-extrato.obj
+
+# target to build an object file
+gerar-extrato.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.obj
+.PHONY : gerar-extrato.c.obj
+
+gerar-extrato.i: gerar-extrato.c.i
+.PHONY : gerar-extrato.i
+
+# target to preprocess a source file
+gerar-extrato.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.i
+.PHONY : gerar-extrato.c.i
+
+gerar-extrato.s: gerar-extrato.c.s
+.PHONY : gerar-extrato.s
+
+# target to generate assembly for a file
+gerar-extrato.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/gerar-extrato.c.s
+.PHONY : gerar-extrato.c.s
+
+listar-clientes.obj: listar-clientes.c.obj
+.PHONY : listar-clientes.obj
+
+# target to build an object file
+listar-clientes.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.obj
+.PHONY : listar-clientes.c.obj
+
+listar-clientes.i: listar-clientes.c.i
+.PHONY : listar-clientes.i
+
+# target to preprocess a source file
+listar-clientes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.i
+.PHONY : listar-clientes.c.i
+
+listar-clientes.s: listar-clientes.c.s
+.PHONY : listar-clientes.s
+
+# target to generate assembly for a file
+listar-clientes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/listar-clientes.c.s
+.PHONY : listar-clientes.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -152,6 +296,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.s
 .PHONY : main.c.s
 
+transferir_entre_contas_do_banco.obj: transferir_entre_contas_do_banco.c.obj
+.PHONY : transferir_entre_contas_do_banco.obj
+
+# target to build an object file
+transferir_entre_contas_do_banco.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.obj
+.PHONY : transferir_entre_contas_do_banco.c.obj
+
+transferir_entre_contas_do_banco.i: transferir_entre_contas_do_banco.c.i
+.PHONY : transferir_entre_contas_do_banco.i
+
+# target to preprocess a source file
+transferir_entre_contas_do_banco.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.i
+.PHONY : transferir_entre_contas_do_banco.c.i
+
+transferir_entre_contas_do_banco.s: transferir_entre_contas_do_banco.c.s
+.PHONY : transferir_entre_contas_do_banco.s
+
+# target to generate assembly for a file
+transferir_entre_contas_do_banco.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\fei_CC2632_bank_project_algorithms.dir\build.make CMakeFiles/fei_CC2632_bank_project_algorithms.dir/transferir_entre_contas_do_banco.c.s
+.PHONY : transferir_entre_contas_do_banco.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +329,30 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... fei_CC2632_bank_project_algorithms
+	@echo ... apagar-cliente.obj
+	@echo ... apagar-cliente.i
+	@echo ... apagar-cliente.s
+	@echo ... cadastrar-cliente.obj
+	@echo ... cadastrar-cliente.i
+	@echo ... cadastrar-cliente.s
+	@echo ... debitar-valor-da-conta.obj
+	@echo ... debitar-valor-da-conta.i
+	@echo ... debitar-valor-da-conta.s
+	@echo ... depositar-valor-na-conta-do-banco.obj
+	@echo ... depositar-valor-na-conta-do-banco.i
+	@echo ... depositar-valor-na-conta-do-banco.s
+	@echo ... gerar-extrato.obj
+	@echo ... gerar-extrato.i
+	@echo ... gerar-extrato.s
+	@echo ... listar-clientes.obj
+	@echo ... listar-clientes.i
+	@echo ... listar-clientes.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... transferir_entre_contas_do_banco.obj
+	@echo ... transferir_entre_contas_do_banco.i
+	@echo ... transferir_entre_contas_do_banco.s
 .PHONY : help
 
 

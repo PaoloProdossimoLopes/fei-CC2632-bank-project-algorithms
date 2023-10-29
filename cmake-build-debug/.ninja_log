@@ -1,8 +1,0 @@
-# ninja log v5
-270	561	1698447933590181224	fei_CC2632_bank_project_algorithms	635ed7fd0acb6374
-9	269	1698447933309690832	CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.cpp.o	e785e5530d5135eb
-0	88	1698448064432878486	build.ninja	5ba916ee9cb3bc0b
-1	236	1698448164307359131	CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.o	de52f1542096eb5a
-236	507	1698448164576412248	fei_CC2632_bank_project_algorithms	7f5e0f8a951dacf
-2	232	1698448199081861086	CMakeFiles/fei_CC2632_bank_project_algorithms.dir/main.c.o	de52f1542096eb5a
-232	307	1698448199155797283	fei_CC2632_bank_project_algorithms	7f5e0f8a951dacf
