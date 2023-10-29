@@ -104,6 +104,7 @@ void apresentar_extrato_do_banco() {
     char cpf[12];
     int resultado;
 
+    // recebendo input do usuario para gerar o extrato do usuario especifico
     printf("Digite o CPF: ");
     scanf("%s", cpf);
 
